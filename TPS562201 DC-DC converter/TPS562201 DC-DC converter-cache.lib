@@ -119,11 +119,11 @@ X ~ 2 0 -100 40 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# TPS56201-DC-DC-converter-rescue_TPS562200-Regulator_Switching
+# TPS562201-DC-DC-converter-rescue_TPS562200-Regulator_Switching-TPS56201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue
 #
-DEF TPS56201-DC-DC-converter-rescue_TPS562200-Regulator_Switching U 0 10 Y Y 1 F N
+DEF TPS562201-DC-DC-converter-rescue_TPS562200-Regulator_Switching-TPS56201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue U 0 10 Y Y 1 F N
 F0 "U" -300 250 50 H V L CNN
-F1 "TPS56201-DC-DC-converter-rescue_TPS562200-Regulator_Switching" -100 250 50 H V L CNN
+F1 "TPS562201-DC-DC-converter-rescue_TPS562200-Regulator_Switching-TPS56201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue" -100 250 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23-6" 50 -250 50 H I L CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST

@@ -4,9 +4,9 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "TPS56201 DC-DC Buck Converter"
-Date "2021-04-27"
-Rev "A"
+Title "TPS562201 DC-DC Buck Converter Breakout"
+Date "2021-06-10"
+Rev "B"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L TPS56201-DC-DC-converter-rescue:TPS562200-Regulator_Switching U1
+L TPS562201-DC-DC-converter-rescue:TPS562200-Regulator_Switching-TPS56201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue U1
 U 1 1 607E906F
 P 4900 3100
 F 0 "U1" H 4900 3467 50  0000 C CNN
@@ -114,12 +114,9 @@ Wire Wire Line
 	6200 3000 6300 3000
 Wire Wire Line
 	6300 3000 6300 3050
-Wire Wire Line
-	6150 3200 6100 3200
 Connection ~ 6300 3500
 Wire Wire Line
-	5300 3200 6100 3200
-Connection ~ 6100 3200
+	5300 3200 6000 3200
 $Comp
 L Device:R_Small_US R1
 U 1 1 607EFA18
@@ -134,12 +131,12 @@ $EndComp
 $Comp
 L Device:R_POT_TRIM_US RV1
 U 1 1 607F2092
-P 6300 3200
-F 0 "RV1" H 6232 3246 50  0000 R CNN
-F 1 "50k" H 6232 3155 50  0000 R CNN
-F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266W" H 6300 3200 50  0001 C CNN
-F 3 "~" H 6300 3200 50  0001 C CNN
-	1    6300 3200
+P 6300 3250
+F 0 "RV1" H 6232 3296 50  0000 R CNN
+F 1 "50k" H 6232 3205 50  0000 R CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266W" H 6300 3250 50  0001 C CNN
+F 3 "~" H 6300 3250 50  0001 C CNN
+	1    6300 3250
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -306,16 +303,7 @@ Wire Wire Line
 Connection ~ 3400 3000
 Connection ~ 2550 3000
 Wire Wire Line
-	6300 3350 6300 3450
-Wire Wire Line
-	6100 3200 6100 3450
-Wire Wire Line
 	6300 3500 6300 3600
-Wire Wire Line
-	6100 3450 6300 3450
-Connection ~ 6300 3450
-Wire Wire Line
-	6300 3450 6300 3500
 Wire Wire Line
 	7250 3900 7250 3450
 Wire Wire Line
@@ -330,4 +318,22 @@ Wire Wire Line
 	6300 3900 6950 3900
 Wire Wire Line
 	6300 3800 6300 3900
+Wire Wire Line
+	6300 3400 6300 3450
+Wire Wire Line
+	6150 3250 6100 3250
+Wire Wire Line
+	6100 3250 6100 3050
+Wire Wire Line
+	6100 3050 6300 3050
+Connection ~ 6300 3050
+Wire Wire Line
+	6300 3050 6300 3100
+Wire Wire Line
+	6000 3200 6000 3450
+Wire Wire Line
+	6000 3450 6300 3450
+Connection ~ 6300 3450
+Wire Wire Line
+	6300 3450 6300 3500
 $EndSCHEMATC

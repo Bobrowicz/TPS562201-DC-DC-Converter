@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:TPS56201 DC-DC converter-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "TPS562201 DC-DC Buck Converter Breakout"
+Date "2021-06-10"
+Rev "B"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -15,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Regulator_Switching:TPS562200 U1
+L TPS562201-DC-DC-converter-rescue:TPS562200-Regulator_Switching-TPS56201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue-TPS562201-DC-DC-converter-rescue U1
 U 1 1 607E906F
 P 4900 3100
 F 0 "U1" H 4900 3467 50  0000 C CNN
@@ -85,7 +84,7 @@ L Device:C_Small C4
 U 1 1 607EC226
 P 5650 3100
 F 0 "C4" V 5421 3100 50  0000 C CNN
-F 1 "100n" V 5512 3100 50  0000 C CNN
+F 1 "0.1u" V 5512 3100 50  0000 C CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5650 3100 50  0001 C CNN
 F 3 "~" H 5650 3100 50  0001 C CNN
 	1    5650 3100
@@ -115,40 +114,29 @@ Wire Wire Line
 	6200 3000 6300 3000
 Wire Wire Line
 	6300 3000 6300 3050
+Connection ~ 6300 3500
 Wire Wire Line
-	6300 3350 6300 3400
-Wire Wire Line
-	6150 3200 6100 3200
-Wire Wire Line
-	6100 3200 6100 3650
-Wire Wire Line
-	6100 3650 6300 3650
-Connection ~ 6300 3650
-Wire Wire Line
-	6300 3650 6300 3705
-Wire Wire Line
-	5300 3200 6100 3200
-Connection ~ 6100 3200
+	5300 3200 6000 3200
 $Comp
 L Device:R_Small_US R1
 U 1 1 607EFA18
-P 6300 3805
-F 0 "R1" H 6368 3851 50  0000 L CNN
-F 1 "10k" H 6368 3760 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6300 3805 50  0001 C CNN
-F 3 "~" H 6300 3805 50  0001 C CNN
-	1    6300 3805
+P 6300 3700
+F 0 "R1" H 6368 3746 50  0000 L CNN
+F 1 "10k" H 6368 3655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6300 3700 50  0001 C CNN
+F 3 "~" H 6300 3700 50  0001 C CNN
+	1    6300 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_POT_TRIM_US RV1
 U 1 1 607F2092
-P 6300 3200
-F 0 "RV1" H 6232 3246 50  0000 R CNN
-F 1 "50k" H 6232 3155 50  0000 R CNN
-F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266W" H 6300 3200 50  0001 C CNN
-F 3 "~" H 6300 3200 50  0001 C CNN
-	1    6300 3200
+P 6300 3250
+F 0 "RV1" H 6232 3296 50  0000 R CNN
+F 1 "50k" H 6232 3205 50  0000 R CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266W" H 6300 3250 50  0001 C CNN
+F 3 "~" H 6300 3250 50  0001 C CNN
+	1    6300 3250
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -160,29 +148,18 @@ Wire Wire Line
 	6300 3000 6650 3000
 Connection ~ 6950 3000
 Wire Wire Line
-	6950 3000 7100 3000
+	6950 3000 7250 3000
 $Comp
 L power:GND #PWR02
 U 1 1 607F9E1A
-P 5500 4005
-F 0 "#PWR02" H 5500 3755 50  0001 C CNN
-F 1 "GND" H 5505 3832 50  0000 C CNN
-F 2 "" H 5500 4005 50  0001 C CNN
-F 3 "" H 5500 4005 50  0001 C CNN
-	1    5500 4005
+P 5500 3950
+F 0 "#PWR02" H 5500 3700 50  0001 C CNN
+F 1 "GND" H 5505 3777 50  0000 C CNN
+F 2 "" H 5500 3950 50  0001 C CNN
+F 3 "" H 5500 3950 50  0001 C CNN
+	1    5500 3950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6300 3905 6300 3950
-Wire Wire Line
-	6300 3950 6950 3950
-Wire Wire Line
-	7250 3950 7250 3450
-Wire Wire Line
-	6950 3450 6950 3950
-Connection ~ 6950 3950
-Wire Wire Line
-	6950 3950 7250 3950
 Wire Wire Line
 	3400 3000 3400 3250
 Wire Wire Line
@@ -198,50 +175,47 @@ Connection ~ 4000 3000
 Wire Wire Line
 	4000 3000 4500 3000
 Wire Wire Line
-	4000 3450 4000 3950
+	4000 3450 4000 3900
 Wire Wire Line
-	4000 3950 4900 3950
-Connection ~ 6300 3950
+	4000 3900 4900 3900
 Wire Wire Line
-	3400 3450 3400 3950
+	3400 3450 3400 3900
 Wire Wire Line
-	3400 3950 3700 3950
-Connection ~ 4000 3950
+	3400 3900 3700 3900
+Connection ~ 4000 3900
 Wire Wire Line
-	3700 3450 3700 3950
-Connection ~ 3700 3950
+	3700 3450 3700 3900
+Connection ~ 3700 3900
 Wire Wire Line
-	3700 3950 4000 3950
+	3700 3900 4000 3900
 Wire Wire Line
-	4900 3400 4900 3950
-Connection ~ 4900 3950
+	4900 3400 4900 3900
+Connection ~ 4900 3900
 Wire Wire Line
-	4900 3950 5500 3950
+	4900 3900 5500 3900
 Wire Wire Line
-	5500 4005 5500 3950
-Connection ~ 5500 3950
-Wire Wire Line
-	5500 3950 6300 3950
+	5500 3950 5500 3900
+Connection ~ 5500 3900
 $Comp
 L Device:C_Small C5
 U 1 1 6080BB7D
-P 6650 3200
-F 0 "C5" H 6742 3246 50  0000 L CNN
-F 1 "22p" H 6742 3155 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6650 3200 50  0001 C CNN
-F 3 "~" H 6650 3200 50  0001 C CNN
-	1    6650 3200
+P 6650 3250
+F 0 "C5" H 6742 3296 50  0000 L CNN
+F 1 "22p" H 6742 3205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6650 3250 50  0001 C CNN
+F 3 "~" H 6650 3250 50  0001 C CNN
+	1    6650 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 3100 6650 3000
+	6650 3150 6650 3000
 Connection ~ 6650 3000
 Wire Wire Line
 	6650 3000 6950 3000
 Wire Wire Line
-	6650 3300 6650 3650
+	6650 3350 6650 3500
 Wire Wire Line
-	6650 3650 6300 3650
+	6650 3500 6300 3500
 Text Label 2650 3000 0    50   ~ 0
 VIN
 Text Label 2650 2700 0    50   ~ 0
@@ -260,24 +234,11 @@ $EndComp
 Text Label 2650 3300 0    50   ~ 0
 EN
 Wire Wire Line
-	2500 2900 2600 2900
+	2500 2900 2550 2900
 Wire Wire Line
-	2500 3000 2600 3000
+	2500 3000 2550 3000
 Wire Wire Line
-	2600 3000 2600 2900
-$Comp
-L Device:R_Small_US R2
-U 1 1 60834368
-P 6300 3500
-F 0 "R2" H 6368 3546 50  0000 L CNN
-F 1 "3k01" H 6368 3455 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6300 3500 50  0001 C CNN
-F 3 "~" H 6300 3500 50  0001 C CNN
-	1    6300 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 3600 6300 3650
+	2550 3000 2550 2900
 Wire Wire Line
 	5550 3100 5300 3100
 $Comp
@@ -294,14 +255,14 @@ $EndComp
 Wire Wire Line
 	3250 3200 4500 3200
 Wire Wire Line
-	2500 3100 2555 3100
+	2500 3100 2550 3100
 Wire Wire Line
-	2500 3200 2555 3200
+	2500 3200 2550 3200
 Wire Wire Line
-	2555 3200 2555 3100
-Connection ~ 2555 3100
+	2550 3200 2550 3100
+Connection ~ 2550 3100
 Wire Wire Line
-	2555 3100 2600 3100
+	2550 3100 2600 3100
 Wire Wire Line
 	3050 3200 2950 3200
 Wire Wire Line
@@ -315,32 +276,64 @@ VBST
 Text Label 5350 3000 0    50   ~ 0
 SW
 $Comp
-L Connector:Conn_01x07_Male J?
+L Connector:Conn_01x07_Male J1
 U 1 1 60888399
 P 2300 3000
-F 0 "J?" H 2408 3389 50  0000 C CNN
+F 0 "J1" H 2408 3389 50  0000 C CNN
 F 1 "Conn_01x07_Male" H 2408 3390 50  0001 C CNN
-F 2 "" H 2300 3000 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 2300 3000 50  0001 C CNN
 F 3 "~" H 2300 3000 50  0001 C CNN
 	1    2300 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2500 2800 2600 2800
+	2500 2800 2550 2800
 Wire Wire Line
-	2600 2800 2600 2700
+	2550 2800 2550 2700
 Wire Wire Line
-	2600 2700 2500 2700
+	2550 2700 2500 2700
 Wire Wire Line
-	7100 2700 7100 3000
-Connection ~ 2600 2700
-Connection ~ 7100 3000
+	7250 2700 7250 3000
+Connection ~ 2550 2700
+Connection ~ 7250 3000
 Wire Wire Line
-	7100 3000 7250 3000
+	2550 2700 7250 2700
 Wire Wire Line
-	2600 2700 7100 2700
-Wire Wire Line
-	3400 3000 2600 3000
+	3400 3000 2550 3000
 Connection ~ 3400 3000
-Connection ~ 2600 3000
+Connection ~ 2550 3000
+Wire Wire Line
+	6300 3500 6300 3600
+Wire Wire Line
+	7250 3900 7250 3450
+Wire Wire Line
+	6950 3900 7250 3900
+Connection ~ 6950 3900
+Wire Wire Line
+	6950 3450 6950 3900
+Wire Wire Line
+	5500 3900 6300 3900
+Connection ~ 6300 3900
+Wire Wire Line
+	6300 3900 6950 3900
+Wire Wire Line
+	6300 3800 6300 3900
+Wire Wire Line
+	6300 3400 6300 3450
+Wire Wire Line
+	6150 3250 6100 3250
+Wire Wire Line
+	6100 3250 6100 3050
+Wire Wire Line
+	6100 3050 6300 3050
+Connection ~ 6300 3050
+Wire Wire Line
+	6300 3050 6300 3100
+Wire Wire Line
+	6000 3200 6000 3450
+Wire Wire Line
+	6000 3450 6300 3450
+Connection ~ 6300 3450
+Wire Wire Line
+	6300 3450 6300 3500
 $EndSCHEMATC
